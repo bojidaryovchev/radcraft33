@@ -25,7 +25,7 @@ export default $config({
     const domainName = isProd($app.stage) ? "radcraft33.com" : `${$app.stage}.radcraft33.com`;
 
     // Create a SES domain identity with DMARC policy for email sending
-    const domainIdentity = new sst.aws.Email("NextEmail", {
+    const domainIdentity = new sst.aws.Email("radcraft33email", {
       sender: domainName,
       dmarc: "v=DMARC1; p=quarantine; adkim=s; aspf=s;",
     });
@@ -42,7 +42,7 @@ export default $config({
     ];
 
     // Deploy the Next.js application with specified domain
-    new sst.aws.Nextjs("NextApp", {
+    new sst.aws.Nextjs("radcraft33app", {
       domain: {
         name: domainName,
         dns: sst.aws.dns({
