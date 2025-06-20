@@ -5,7 +5,7 @@ import "sst";
 export {};
 declare module "sst" {
   export interface Resource {
-    NextEmail: {
+    radcraft33email: {
       type: "sst.aws.Email";
       sender: string;
     };

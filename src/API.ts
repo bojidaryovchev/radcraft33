@@ -25,7 +25,7 @@ export const sendContactFormEmail = async ({ name, email, message }: ContactForm
 
   await client.send(
     new SendEmailCommand({
-      FromEmailAddress: `noreply@${Resource.NextEmail.sender}`,
+      FromEmailAddress: `noreply@${Resource.radcraft33email.sender}`,
       Destination: {
         ToAddresses: [CONTACT_EMAIL],
       },

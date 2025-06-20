@@ -89,7 +89,7 @@ const ContactSection: React.FC = () => {
     setIsSubmitting(true);
 
     // Show loading toast
-    const loadingToast = toast.loading("Изпращане на съобщението...");
+    const loadingToast = toast.loading("Your message is being sent...");
 
     try {
       const response = await fetch("/api/contact", {
