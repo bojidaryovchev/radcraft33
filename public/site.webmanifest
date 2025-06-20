@@ -1,9 +1,15 @@
 {
-  "name": "",
-  "short_name": "",
+  "name": "radcraft33 - Professional video editing",
+  "short_name": "radcraft33",
+  "description": "radcraft33 - Professional video editing, highlight extraction and more",
   "icons": [
     { "src": "/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png" }
+    { "src": "/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png" },
+    {
+      "src": "/images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
   ],
   "theme_color": "#ffffff",
   "background_color": "#ffffff",

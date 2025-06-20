@@ -1,0 +1,23 @@
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://radcraft33.com/sitemap.xml
+
+# Block access to certain areas
+Disallow: /api/
+
+# Allow search engines to crawl images
+Allow: /images/
