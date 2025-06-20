@@ -1,0 +1,4 @@
+{
+  "tailwindCSS.classAttributes": ["className"],
+  "vscode-pets.theme": "winter"
+}

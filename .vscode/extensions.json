@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "eamodio.gitlens",
+    "streetsidesoftware.code-spell-checker",
+    "prisma.prisma",
+    "esbenp.prettier-vscode",
+    "pkief.material-icon-theme",
+    "dbaeumer.vscode-eslint",
+    "bradlc.vscode-tailwindcss",
+    "foxundermoon.shell-format",
+    "tonybaloney.vscode-pets"
+  ]
+}
