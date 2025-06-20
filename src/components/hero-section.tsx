@@ -39,7 +39,7 @@ const HeroSection: React.FC = () => {
         }`}
       >
         {/* Logo */}
-        <div className="flex items-center justify-center mb-8">
+        <div className="flex items-center justify-center">
           <Image src="/logo.png" alt="radcraft33 video editing" className="w-32 h-32 object-contain" />
         </div>
 
@@ -78,7 +78,7 @@ const HeroSection: React.FC = () => {
           </Button>
         </div>
 
-        <div className="mt-12 flex justify-center space-x-8 text-sm text-gray-400">
+        <div className="my-12 flex justify-center space-x-8 text-sm text-gray-400">
           <div className="flex flex-col items-center">
             <span className="text-2xl font-bold text-white">500+</span>
             <span>Videos Edited</span>
