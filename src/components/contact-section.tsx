@@ -241,7 +241,7 @@ const ContactSection: React.FC = () => {
               <Input
                 id="projectType"
                 name="projectType"
-                value={formData.name}
+                value={formData.projectType}
                 onChange={handleInputChange}
                 onBlur={handleBlur}
                 placeholder="e.g., YouTube video, TikTok compilation, Stream highlights"
