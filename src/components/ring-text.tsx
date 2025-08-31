@@ -69,7 +69,7 @@ const RingText: React.FC<RingTextProps> = ({
   text,
   radius,
   arcDegrees = 120,
-  speed = 0.6,
+  speed = 0.2,
   tiltDeg = 12,
   fontSize = 8,
 
