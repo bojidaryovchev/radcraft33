@@ -16,33 +16,33 @@ const EarthCanvas: React.FC = () => {
     >
       <color attach="background" args={["#000"]} />
       <ambientLight intensity={0.2} />
-      <directionalLight
-        position={[120, 160, 80]}
-        intensity={1.2}
-        castShadow
-        shadow-mapSize-width={2048}
-        shadow-mapSize-height={2048}
-        shadow-camera-near={10}
-        shadow-camera-far={800}
-        shadow-camera-left={-250}
-        shadow-camera-right={250}
-        shadow-camera-top={250}
-        shadow-camera-bottom={-250}
-        shadow-bias={-0.0005}
-        shadow-normalBias={0.02}
-      />
 
       <Suspense fallback={null}>
         {/* Wrap the whole Earth + ads in PresentationControls */}
         <PresentationControls
-          global={false} // rotate only this group, not the camera
-          cursor // pointer cursor while dragging
-          rotation={[0, 0, 0]} // initial rotation
-          polar={[-Math.PI / 3, Math.PI / 3]} // vertical rotation limits
-          azimuth={[-Infinity, Infinity]} // horizontal: free spin
-          snap={false} // set true if you want snap-back
+          global={false}
+          cursor
+          rotation={[0, 0, 0]}
+          polar={[-Math.PI / 3, Math.PI / 3]}
+          azimuth={[-Infinity, Infinity]}
         >
           <group>
+            {/* light rotates with the Earth */}
+            <directionalLight
+              position={[120, 160, 80]}
+              intensity={1.2}
+              castShadow
+              shadow-mapSize-width={2048}
+              shadow-mapSize-height={2048}
+              shadow-camera-near={10}
+              shadow-camera-far={800}
+              shadow-camera-left={-250}
+              shadow-camera-right={250}
+              shadow-camera-top={250}
+              shadow-camera-bottom={-250}
+              shadow-bias={-0.0005}
+              shadow-normalBias={0.02}
+            />
             <EarthSystem />
           </group>
         </PresentationControls>
