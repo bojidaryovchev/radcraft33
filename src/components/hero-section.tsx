@@ -1,11 +1,14 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import { useClient } from "@/hooks/use-client.hook";
 import { Play, Sparkles } from "lucide-react";
 import Image from "next/image";
+import React, { useEffect, useState } from "react";
 
 const HeroSection: React.FC = () => {
+  const isClient = useClient();
+
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -18,20 +21,22 @@ const HeroSection: React.FC = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-green-900/20 via-emerald-900/20 to-teal-900/20 animate-pulse" />
 
       {/* Floating particles effect */}
-      <div className="absolute inset-0">
-        {[...Array(20)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-2 h-2 bg-white/10 rounded-full animate-bounce"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 2}s`,
-              animationDuration: `${2 + Math.random() * 3}s`,
-            }}
-          />
-        ))}
-      </div>
+      {isClient && (
+        <div className="absolute inset-0">
+          {[...Array(20)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute w-2 h-2 bg-white/10 rounded-full animate-bounce"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 2}s`,
+                animationDuration: `${2 + Math.random() * 3}s`,
+              }}
+            />
+          ))}
+        </div>
+      )}
 
       <div
         className={`relative z-10 text-center px-6 max-w-4xl mx-auto transition-all duration-1000 transform ${
@@ -40,7 +45,7 @@ const HeroSection: React.FC = () => {
       >
         {/* Logo */}
         <div className="flex items-center justify-center">
-          <Image src="/logo.png" alt="radcraft33 video editing" className="w-32 h-32 object-contain" />
+          <Image src="/logo.png" alt="radcraft33 video editing" width={128} height={128} className="object-contain" />
         </div>
 
         <div className="flex items-center justify-center mb-6">

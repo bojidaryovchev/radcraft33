@@ -106,6 +106,7 @@ const VideoShowcase: React.FC = () => {
                 <Image
                   src={video.thumbnail}
                   alt={video.title}
+                  fill
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-300" />
